@@ -2,15 +2,1160 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurante</title>
-  <link rel="stylesheet" href="src/css/style.css">
-  <script src="src/js/main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script type="module" src="src/js/main.js" defer></script>
 </head>
 
-<body class="bg-black">
+<body>
+    <header class="fixed top-0 left-0 w-full flex flex-row justify-center h-20 bg-caput-mortum z-1">
+        <nav class="flex flex-row md:justify-between justify-start items-center w-11/12 flex-nowrap">
+            <div class="md:hidden w-1/4">
+                <button id="hamburger"
+                    class="bg-burnt-umber/80 border-2 border-coffee rounded-sm aspect-square w-12 hover:cursor-pointer">
+                    <i class="text-white-smoke ti ti-menu-2 text-2xl"></i></button>
+            </div>
 
+            <div class="md:w-1/4 w-2/4 h-full flex justify-center md:justify-start">
+                <a class="aspect-square object-contain content-center" href="/">
+                    <img class="box-border p-2" src="img/Logo.webp" alt="Logo">
+                </a>
+            </div>
+
+            <div class="md:flex hidden w-2/4 flex-row justify-around flex-nowrap">
+                <a class="text-white-smoke" href="/menu">Menu</a>
+                <a class="text-white-smoke" href="/reservation">Reservation</a>
+                <a class="text-white-smoke" href="/contact">Contact</a>
+            </div>
+
+            <div class="w-1/4 text-end md:block hidden">
+                <!-- Here will be the language option -->
+            </div>
+        </nav>
+    </header>
+
+    <main class="mt-20 mb-20">
+        <section class="hidden" id="section-home">
+            <video class="bg-coffee w-full h-[70vh] object-cover" src="video/Background Video.mov" autoplay muted loop>
+            </video>
+
+            <div
+                class="absolute top-[45%] left-[50%] translate-[-50%] h-[70vh] flex flex-col justify-center items-center gap-8">
+                <img class="aspect-square h-[65%] object-contain" src="img/Logo.webp" alt="logo">
+                <p
+                    class="sm:text-4xl text-2xl text-center bg-gradient-to-r from-white-smoke/25 via-white-smoke/50 to-white-smoke/25 px-8 py-4">
+                    The Best Amercian Specialities
+                </p>
+            </div>
+
+            <div class="w-full flex flex-col items-center mt-10">
+                <h1 class="font-semibold text-3xl">About Us</h1>
+
+                <div class="flex flex-col md:flex-row justify-around items-center w-[95%] md:w-[75%] mt-4 gap-4">
+                    <div class="w-full aspect-video">
+                        <img class="w-full aspect-video rounded-lg" src="img/Outside.jpg" alt="Outside">
+                    </div>
+                    <div class="w-full">
+                        <p class="text-center">
+                            L.A American Diner: A Taste of America. From the coasts of California to the fields of
+                            Texas, our menu takes you on a culinary journey across the country. Enjoy our handcrafted
+                            burgers, BBQ ribs, delicious steaks, and homemade desserts, all made with the freshest,
+                            highest quality ingredients.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex justify-around items-center w-[95%] md:w-[50%] mt-24">
+                    <div>
+                        <p class="text-center">
+                            We offer a handful of different kinds of foods from all across the USA 🇺🇸. Ribs, meats,
+                            hot dogs, quesadillas, fajitas, and our well acclaimed burgers are here all waiting for you.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="flex flex-col justify-around items-center w-[95%] md:w-[50%] mt-12">
+                    <a href="/menu" class="border-2 border-bistre bg-coffee text-white-smoke w-[50%] md:w-[25%]
+                        py-2 rounded-full hover:cursor-pointer hover:bg-caput-mortum transition text-center">
+                        Check our menu
+                    </a>
+                    <p class="opacity-30">or</p>
+                    <a href="/reservation" class="border-2 border-bistre bg-coffee text-white-smoke w-[50%] md:w-[25%]
+                        py-2 rounded-full hover:cursor-pointer hover:bg-caput-mortum transition text-center">
+                        Make a reservation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="hidden" id="section-menu">
+            <h1 class="text-center text-5xl font-bold mt-24">Menu</h1>
+
+            <div class="mx-auto w-[90%] overflow-scroll">
+                <div
+                    class="w-fit mx-auto flex overflow-scroll gap-4 mt-12 p-4 text-nowrap bg-gray-100 border-b-4 rounded">
+                    <a class="border-e border-gray-400 pe-4" href="#starters">Starters</a>
+                    <a class="border-e border-gray-400 pe-4" href="#ribs">Ribs</a>
+                    <a class="border-e border-gray-400 pe-4" href="#mega-dogs">Mega Dogs</a>
+                    <a class="border-e border-gray-400 pe-4" href="#meats">Meats</a>
+                    <a class="border-e border-gray-400 pe-4" href="#salads">Salads</a>
+                    <a class="border-e border-gray-400 pe-4" href="#sharers">Sharers</a>
+                    <a class="border-e border-gray-400 pe-4" href="#quesadillas">Quesadillas</a>
+                    <a class="border-e border-gray-400 pe-4" href="#fajitas">Fajitas</a>
+                    <a class="border-e border-gray-400 pe-4" href="#special-burgers">Special Burgers</a>
+                    <a class="border-e border-gray-400 pe-4" href="#mega-burgers">Mega Burgers</a>
+                    <a href="#children-menu">Children's Menu</a>
+                </div>
+            </div>
+
+            <!-- TODO: Add the Starters -->
+
+
+
+            <article id="starters" class="flex flex-col items-center mt-12">
+                <header>
+                    <h1 class="text-center text-4xl font-bold">Starters</h1>
+                </header>
+
+                <main class="md:w-[70%] flex flex-col items-center mt-8 gap-8 md:grid md:grid-cols-2 md:gap-16">
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Tempura Prawns</h2>
+                        <p class="text-sm opacity-75">
+                            Lightly tempura battered prawns served with a sweet chilli dip.
+                        </p>
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-royal-blue-traditional/75 text-white rounded-full p-1 ti ti-fish"></i>
+                            </div>
+
+                            <p class="w-full text-end">7.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Potato Skins</h2>
+                        <p class="text-sm opacity-75">
+                            Potato skins stuffed with cheese and bacon served with sour cream.
+                        </p>
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">6.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Hot Wings</h2>
+                        <p class="text-sm opacity-75">
+                            Spicy chicken wings served with sour cream.
+                        </p>
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">6.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">BBQ Buffalo wings</h2>
+                        <p class="text-sm opacity-75">
+                            Chicken winas marinated in BBQ sauce
+                        </p>
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                            </div>
+
+                            <p class="w-full text-end">6.95€</p>
+                        </div>
+                    </div>
+                </main>
+            </article>
+
+            <article id="ribs" class="flex flex-col items-center mt-12">
+                <header>
+                    <h1 class="text-center text-4xl font-bold">Ribs</h1>
+                </header>
+
+                <main class="md:w-[70%] flex flex-col md:flex-row items-center mt-8 gap-8 md:gap-16">
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Small Texan Ribs</h2>
+                        <p class="text-sm opacity-75">
+                            Half a rack of ribs, slowly oven cooked in our special BBQ Sauce, served with salad,
+                            coleslaw and a bucket of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">14.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Tennessee Ribs</h2>
+                        <p class="text-sm opacity-75">
+                            Full rack of ribs, slowly oven cooked in our special BBQ sauce, served with salad, coleslaw
+                            and a bucket of fries.
+                        </p>
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">18.95€</p>
+                        </div>
+                    </div>
+                </main>
+            </article>
+
+            <article id="mega-dogs" class="flex flex-col items-center mt-12">
+                <header>
+                    <h1 class="text-center text-4xl font-bold">Mega Dogs</h1>
+                </header>
+
+                <main class="md:w-[70%] flex flex-col items-center mt-8 gap-8 md:grid md:grid-cols-2 md:gap-16">
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">American Dog</h2>
+                        <p class="text-sm opacity-75">
+                            Bratwurst sausage served in a soft roll and topped with tomato ketchup and mustard. Served
+                            with a bucket of fries.
+                        </p>
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                            </div>
+
+                            <p class="w-full text-end">11.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Currywurst Dog</h2>
+                        <p class="text-sm opacity-75">
+                            Bratwurst Sausage served in a soft roll and topped with curry sauce. Served with a bucket of
+                            fries.
+                        </p>
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                            </div>
+
+                            <p class="w-full text-end">11.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Swedish Dog</h2>
+                        <p class="text-sm opacity-75">
+                            Bratwurst Sausage served in a soft roll and topped with sweet mustard sauce & crispy onions.
+                            Served with a bucket of fries.
+                        </p>
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                            </div>
+
+                            <p class="w-full text-end">11.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Chili Dog</h2>
+                        <p class="text-sm opacity-75">
+                            Bratwurst Sausage served in a soft roll and topped with homemade chilli con carne, jalapeños
+                            and cheese. Served with a bucket of fries.
+                        </p>
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">11.95€</p>
+                        </div>
+                    </div>
+                </main>
+            </article>
+
+            <article id="meats" class="flex flex-col items-center mt-12">
+                <header>
+                    <h1 class="text-center text-4xl font-bold">Meats</h1>
+                </header>
+
+                <main
+                    class="md:w-[70%] flex flex-col items-center mt-8 gap-8 md:grid md:grid-cols-3 md:gap-16 md:justify-items-center">
+                    <div class="flex flex-col w-[95%] items-center gap-4 md:col-span-3 md:w-[70%]">
+                        <h2 class="w-full text-2xl font-bold md:text-center">Fillet Steak</h2>
+                        <p class="text-sm opacity-75 md:opacity-100 md:text-lg">
+                            Fillet steak cooked to choice, served with a bucket of fries, salad and coleslaw.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">25.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4 md:col-span-2 md:w-[80%]">
+                        <h2 class="w-full text-xl">Ribeye Steak</h2>
+                        <p class="text-sm opacity-75 md:w-full">
+                            Ribeye steak cooked to choice, served with a bucket of fries, salad and coleslaw.
+                        </p>
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">21.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Chicken on a Skewer</h2>
+                        <p class="text-sm opacity-75">
+                            Cubes of chicken breast, mixed peppers and onions served upon a skewer with fries, salad and
+                            coleslaw.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">16.50€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Butterfly Chicken</h2>
+                        <p class="text-sm opacity-75">
+                            Grilled butterfly chicken breast served with a bucket of fries, salad and coleslaw.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">13.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Cheese smothered Chicken</h2>
+                        <p class="text-sm opacity-75">
+                            Grilled butterfly chicken breast topped with smoked bacon & melted mozzarella served with a
+                            bucket of fries, salad and coleslaw.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">14.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Chili con Carne</h2>
+                        <p class="text-sm opacity-75">
+                            Homemade chilli con carne, served with rice & a small bucket of nachos.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">13.95€</p>
+                        </div>
+                    </div>
+                </main>
+
+                <footer class="flex justify-end items-center gap-2 w-[95%] mt-12 mb-8 md:w-[70%]">
+                    <p class="text-coffee">Pepper Sauce</p>
+                    <p class="text-2xl text-ut-orange font-bold">·</p>
+                    <p>3.00€</p>
+                </footer>
+            </article>
+
+            <article id="salads" class="flex flex-col items-center mt-12">
+                <header>
+                    <h1 class="text-center text-4xl font-bold">Salads</h1>
+                </header>
+
+                <main
+                    class="md:w-[70%] flex flex-col items-center mt-8 gap-8 md:gap-16 md:grid md:grid-cols-2 md:justify-items-center">
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Mediterranean</h2>
+                        <p class="text-sm opacity-75">
+                            Mixed leaves, shredded carrot, diced peppers, crispy onions, tomato & feta cheese.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">8.50€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] gap-4">
+                        <h2 class="w-full text-xl">Atlanta</h2>
+                        <p class="text-sm opacity-75">
+                            Mixed leaves, diced peppers, crispy onions, tomato & tuna.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-royal-blue-traditional/75 text-white rounded-full p-1 ti ti-fish"></i>
+                            </div>
+
+                            <p class="w-full text-end">9.50€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4 md:col-span-2 md:w-[60%]">
+                        <h2 class="w-full text-xl">Caesar Salad</h2>
+                        <p class="text-sm opacity-75">
+                            Romaine lettuce tossed in caesar dressing, parmesan cheese, crouton topped with strips
+                            of chicken breast and bacon.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">11.50€</p>
+                        </div>
+                    </div>
+                </main>
+            </article>
+
+            <article id="sharers" class="flex flex-col items-center mt-12">
+                <header>
+                    <h1 class="text-center text-4xl font-bold">Sharers</h1>
+                </header>
+
+                <main class="md:w-[70%] flex flex-col items-center mt-8 gap-8 md:gap-16 md:grid md:grid-cols-2">
+                    <div class="flex flex-col w-[95%] gap-4">
+                        <h2 class="w-full text-xl">Cheesy Nachos</h2>
+                        <p class="text-sm opacity-75">Nachos topped with mozzarella cheese.</p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">8.50€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">L.A Special Nachos</h2>
+                        <p class="text-sm opacity-75">
+                            Nachos topped with homemade chilli con carne, diced peppers, jalaneños and mozzarella
+                            cheese.
+                        </p>
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">10.50€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Chicken Nachos</h2>
+                        <p class="text-sm opacity-75">
+                            Nachos topped with strips of chicken breast, onions, peppers tossed in tex mex spices and
+                            mozzarella cheese. All Nachos served with guacamole, sour cream, tomato salsa separate.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">10.50€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">L.A Special Combo</h2>
+                        <p class="text-sm opacity-75">
+                            Sharing combo plate, hot wings, bbq wings, chicken tenders, stuffed jalapeños, onion rings,
+                            mozzarella sticks and potato wedges. Served with a selection of dips.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">16.00€</p>
+                        </div>
+                    </div>
+                </main>
+            </article>
+
+            <article id="quesadillas" class="flex flex-col items-center mt-12">
+                <header>
+                    <h1 class="text-center text-4xl font-bold">Quesadillas</h1>
+                </header>
+
+                <main class="md:w-[70%] flex flex-col items-center mt-8 gap-8 md:gap-16 md:grid md:grid-cols-2">
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Hollywood Quesadilla</h2>
+                        <p class="text-sm opacity-75">
+                            Toasted wheat tortilla filled with mozzarella cheese, chicken breast, smoked bacon, tomato
+                            and onion.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">12.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Spicy Quesadilla</h2>
+                        <p class="text-sm opacity-75">
+                            Toasted wheat tortilla filled with mozzarella cheese, chicken breast, peppers and onion
+                            tossed in tex mex spices.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">12.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Chili Quesadilla</h2>
+                        <p class="text-sm opacity-75">
+                            Toasted wheat tortilla filled with mozzarella cheese and homemade chilli con carne.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">12.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Veggie Quesadilla</h2>
+                        <p class="text-sm opacity-75">
+                            Toasted wheat tortilla filled with mozzarella cheese, tomato, onion, peppers and mushrooms
+                            tossed in tex mex spices.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                            </div>
+
+                            <p class="w-full text-end">12.95€</p>
+                        </div>
+                    </div>
+                </main>
+
+                <footer class="flex justify-end items-center gap-2 w-[95%] mt-12 mb-8 md:w-[70%]">
+                    <p class="text-sm opacity-50">
+                        All served with our special dips, Guacamole, Sour cream and tomato salsa.
+                    </p>
+                </footer>
+            </article>
+
+            <article id="fajitas" class="flex flex-col items-center mt-12">
+                <header>
+                    <h1 class="text-center text-4xl font-bold">Fajitas</h1>
+                </header>
+
+                <main class="md:w-[70%] flex flex-col items-center mt-8 gap-8 md:gap-16 md:grid md:grid-cols-2">
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">New Mexico</h2>
+                        <p class="text-sm opacity-75">
+                            Strips of chicken breast, onions and peppers tossed in tex mex spices served with three
+                            wheat tortillas.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                            </div>
+
+                            <p class="w-full text-end">16.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Arizona</h2>
+                        <p class="text-sm opacity-75">
+                            Strips of chicken breast, onions and peppers tossed in tex mex spices served with three
+                            wheat tortillas.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                            </div>
+
+                            <p class="w-full text-end">19.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Vegetarian Fajita</h2>
+                        <p class="text-sm opacity-75">
+                            Tomato, onions, peppers and mushrooms tossed in tex mex spices.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                            </div>
+
+                            <p class="w-full text-end">14.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Prawn Fajita</h2>
+                        <p class="text-sm opacity-75">
+                            Prawns, onions and peppers tossed in tex mex spices. Served with three wheat tortillas.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                            </div>
+
+                            <p class="w-full text-end">16.95€</p>
+                        </div>
+                    </div>
+                </main>
+
+                <footer class="flex justify-end items-center gap-2 w-[95%] mt-12 mb-8 md:w-[70%]">
+                    <p class="text-sm opacity-50">
+                        All served with our special dips, Guacamole, Sour cream, tomato salsa and cheese separate.
+                    </p>
+                </footer>
+            </article>
+
+            <article id="special-burgers" class="flex flex-col items-center mt-12">
+                <header>
+                    <h1 class="text-center text-4xl font-bold">Special Burgers</h1>
+                </header>
+
+                <main class="md:w-[70%] flex flex-col items-center mt-8 gap-8 md:gap-16 md:grid md:grid-cols-3">
+                    <div class="flex flex-col w-[95%] items-center gap-4 md:col-span-2">
+                        <h2 class="w-full text-xl">Original</h2>
+                        <p class="text-sm opacity-75">
+                            180gr Hamburger, smoked bacon, melted cheddar cheese, crispy onion ring, lettuce & tomato.
+                            Served with a bucket of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-coffee/50 rounded-full p-1 ti ti-egg rotate-180"></i>
+                            </div>
+
+                            <p class="w-full text-end">12.45€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Cheese Burger Beverly Hills</h2>
+                        <p class="text-sm opacity-75">
+                            180gr Hamburger, melted cheddar & mozzarella cheese, crispy onion ring, lettuce & tomato.
+                            Served with a bucket of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-coffee/50 rounded-full p-1 ti ti-egg rotate-180"></i>
+                            </div>
+
+                            <p class="w-full text-end">12.45€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4 md:col-span-2">
+                        <h2 class="w-full text-xl">Rodeo Drive</h2>
+                        <p class="text-sm opacity-75">
+                            180gr Hamburger, smoked bacon, seasoned with BBQ sauce, melted cheddar cheese, crispy onion
+                            ring, lettuce & tomato. Served with a bucket of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-coffee/50 rounded-full p-1 ti ti-egg rotate-180"></i>
+                            </div>
+
+                            <p class="w-full text-end">12.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Pasadena</h2>
+                        <p class="text-sm opacity-75">
+                            180gr Hamburger, blue cheese, seasoned with spicy jerk BBQ sauce, crispy onion ring, lettuce
+                            & tomato. Served with a bucket of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-coffee/50 rounded-full p-1 ti ti-egg rotate-180"></i>
+                            </div>
+
+                            <p class="w-full text-end">12.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Santa Bàrbara</h2>
+                        <p class="text-sm opacity-75">
+                            180gr Hamburger, topped with homemade chilli con carne, jalapeños, melted cheddar cheese,
+                            crispy onion ring, lettuce & tomato. Served with a bucket of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-coffee/50 rounded-full p-1 ti ti-egg rotate-180"></i>
+                            </div>
+
+                            <p class="w-full text-end">12.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">California</h2>
+                        <p class="text-sm opacity-75">
+                            Crispy fried chicken, smoked bacon, melted cheddar cheese, crispy onion ring, lettuce &
+                            tomato. Served with a bucket of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-coffee/50 rounded-full p-1 ti ti-egg rotate-180"></i>
+                            </div>
+
+                            <p class="w-full text-end">12.45€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Veggie Burger</h2>
+                        <p class="text-sm opacity-75">
+                            Spicy bean burger, crispy onion ring, lettuce & tomato. Served with a bucket of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-coffee/50 rounded-full p-1 ti ti-egg rotate-180"></i>
+                            </div>
+
+                            <p class="w-full text-end">10.95€</p>
+                        </div>
+                    </div>
+                </main>
+            </article>
+
+            <article id="mega-burgers" class="flex flex-col items-center mt-12">
+                <header>
+                    <h1 class="text-center text-4xl font-bold">Mega Burgers</h1>
+                </header>
+
+                <main
+                    class="md:w-[70%] flex flex-col items-center mt-8 gap-8 md:gap-16 md:grid md:grid-cols-3 md:justify-items-center">
+                    <div
+                        class="flex flex-col w-[95%] items-center gap-4 border-2 border-gray-400 rounded-xl p-4 md:col-span-3 md:w-[70%]">
+                        <h2 class="w-full text-2xl font-bold">Premium Jack Daniels</h2>
+                        <p class="text-sm opacity-90">
+                            250gr Hamburger, smoked bacon, melted mature cheddar cheese, seasoned with Jack Daniel's
+                            sauce, crispy onion ring, lettuce & tomato. Served with a bucket of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-coffee/50 rounded-full p-1 ti ti-egg rotate-180"></i>
+                            </div>
+
+                            <p class="w-full text-end">15.50€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Original XL</h2>
+                        <p class="text-sm opacity-75">
+                            250gr Hamburger, smoked bacon, melted cheddar cheese, crispy onion ring, lettuce & tomato.
+                            Served with a bucket of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-coffee/50 rounded-full p-1 ti ti-egg rotate-180"></i>
+                            </div>
+
+                            <p class="w-full text-end">14.45€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">LA Burger</h2>
+                        <p class="text-sm opacity-75">
+                            250gr Hamburger, blue cheese, seasoned with spicy jerk BBQ sauce, crispy onion ring, lettuce
+                            & tomato. Served with a bucket of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-coffee/50 rounded-full p-1 ti ti-egg rotate-180"></i>
+                            </div>
+
+                            <p class="w-full text-end">14.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Big Boy</h2>
+                        <p class="text-sm opacity-75">
+                            250gr Hamburger, topped with homemade chilli con carne, jalapeños, melted cheddar cheese,
+                            crispy onion ring, lettuce & tomato. Served with a bucket of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-coffee/50 rounded-full p-1 ti ti-egg rotate-180"></i>
+                            </div>
+
+                            <p class="w-full text-end">14.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4 md:col-span-2">
+                        <h2 class="w-full text-xl">Gran Canyon</h2>
+                        <p class="text-sm opacity-75">
+                            250gr Hamburger, smoked bacon, fried egg, melted cheddar cheese, crispy onion ring, lettuce
+                            & tomato. Served with a bucket of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-coffee/50 rounded-full p-1 ti ti-egg rotate-180"></i>
+                            </div>
+
+                            <p class="w-full text-end">14.95€</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Veggie Premium</h2>
+                        <p class="text-sm opacity-75">
+                            100% plant based soya burger, melted cheddar cheese, seasoned with BBQ sauce, crispy onion
+                            ring, lettuce & tomato. Served with a bucket of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-coffee/50 rounded-full p-1 ti ti-egg rotate-180"></i>
+                            </div>
+
+                            <p class="w-full text-end">12.45€</p>
+                        </div>
+                    </div>
+                </main>
+            </article>
+
+            <article id="children-menu" class="flex flex-col items-center mt-12">
+                <header>
+                    <h1 class="text-center text-4xl font-bold">Childrens Menu (Under 12)</h1>
+                </header>
+
+                <!-- Ya vere como lo pongo, probablemente con una "etiqueta" en el header arriba a la derecha -->
+                <p class="opacity-90 mt-2">Everything at 6.50€</p>
+
+                <main class="md:w-[70%] flex flex-col items-center mt-8 gap-8 md:gap-16 md:flex-row">
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Burger</h2>
+                        <p class="text-sm opacity-75">
+                            120gr Hamburger, cheddar cheese, ketchup, mustard and onions. Served with a handful of
+                            fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                                <i class="bg-blue-300 rounded-full p-1 ti ti-milk-filled"></i>
+                                <i class="bg-coffee/50 rounded-full p-1 ti ti-egg rotate-180"></i>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Hotdog</h2>
+                        <p class="text-sm opacity-75">
+                            Bratwurst sausage served in a soft roll and topped with tomato ketchup and mustard. Served
+                            with a handful of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-[95%] items-center gap-4">
+                        <h2 class="w-full text-xl">Chicken Nuggets</h2>
+                        <p class="text-sm opacity-75">
+                            9 Chicken Nuggets, breaded with flour and eggs and deep fried in sunflower oil. Served with
+                            a handful of fries.
+                        </p>
+
+                        <div class="w-full flex justify-between">
+                            <div class="flex justify-around gap-2">
+                                <i class="bg-amber-400 rounded-full p-1 ti ti-wheat"></i>
+                                <i class="bg-amber-200 rounded-full p-1 ti ti-egg"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                </main>
+
+            </article>
+
+        </section>
+
+        <section class="hidden" id="section-reservation">
+            <h1 class="text-center text-5xl font-bold mt-24">Reservation</h1>
+
+            <form class="mx-auto flex flex-col mt-8 justify-center items-center gap-6 md:w-[70%] lg:w-[50%]">
+                <div class="flex flex-col justify-around w-[80%] gap-1">
+                    <label for="email-input">Email:</label>
+                    <input class="border-2 border-gray-500 rounded p-1" type="email" id="email-input">
+                </div>
+
+                <div class="flex flex-col justify-around w-[80%] gap-1">
+                    <label for="tel-input">Telephone:</label>
+                    <input class="border-2 border-gray-500 rounded p-1" type="tel" id="tel-input">
+                </div>
+
+                <div class="flex flex-col justify-around w-[80%] gap-1">
+                    <label for="date-input">Date:</label>
+                    <input class="border-2 border-gray-500 rounded p-1" type="datetime-local" id="date-input">
+                </div>
+
+                <div class="flex flex-col justify-around w-[80%] gap-1">
+                    <label for="guests-input">Number of Guests:</label>
+                    <input class="w-20 border-2 border-gray-500 rounded p-1" type="number" id="guests-input" min="1">
+                </div>
+
+                <button class="border-2 border-bistre bg-coffee text-white-smoke mt-6 w-[50%] lg:w-[35%]
+                py-2 rounded-full hover:cursor-pointer hover:bg-caput-mortum transition text-center" type="submit">Make
+                    your reservation</button>
+            </form>
+        </section>
+
+        <section class="hidden" id="section-contact">
+            <h1 class="text-center text-5xl font-bold mt-24">Contact and Location</h1>
+
+            <!-- TODO: Change the phone to the real one at the end (just in case I don't click it jajaja) -->
+            <h2 class="text-center text-3xl mt-12">Contact</h2>
+            <div class="flex flex-col gap-4 items-center mt-6 w-full">
+                <p>You can call us at
+                    <a class="text-royal-blue-traditional/70" href="tel:+340000000000">+34 871 90 74 18</a>
+                </p>
+                <p>or contact us at</p>
+                <div class="flex justify-around items-center w-80">
+                    <a class="px-8 py-4 rounded-full border-2 border-[#833AB4] bg-gradient-to-tr from-[#FCB045] via-[#FD1D1D] 
+                    to-[#833AB4] text-white" href="https://instagram.com/laamericandiner">Instagram</a>
+                    <p class="opacity-50">or</p>
+                    <a class="px-8 py-4 rounded-full border-2 border-[#1465c1] bg-[#1877E2] text-white"
+                        href="https://facebook.com/LA-American-Diner-100038914158993">Facebook</a>
+                </div>
+            </div>
+
+
+            <h2 class="text-center text-3xl mt-12">Diner Hours</h2>
+            <div class="mx-auto mt-8 flex flex-col gap-2 w-72">
+                <p class="flex">
+                    <span class="w-50">Monday:</span> <span class="w-50">17:00 - 22:00</span>
+                </p>
+
+                <p class="flex">
+                    <span class="w-50">Tuesday:</span> <span class="w-50">17:00 - 22:00</span>
+                </p>
+
+                <p class="flex">
+                    <span class="w-50">Wednesday:</span> <span class="w-50 text-red-500">Closed</span>
+                </p>
+
+                <p class="flex">
+                    <span class="w-50">Thursday:</span> <span class="w-50 text-red-500">Closed</span>
+                </p>
+
+                <p class="flex">
+                    <span class="w-50">Friday:</span> <span class="w-50 text-red-500">Closed</span>
+                </p>
+
+                <p class="flex">
+                    <span class="w-50">Saturday:</span> <span class="w-50">17:00 - 22:00</span>
+                </p>
+
+                <p class="flex">
+                    <span class="w-50">Sunday:</span> <span class="w-50">17:00 - 22:00</span>
+                </p>
+
+            </div>
+
+            <h2 class="text-center text-3xl mt-12">Location</h2>
+            <p class="mt-8 text-center">We are located at:</p>
+            <p class="mt-4 text-center text-pretty">Paseo Del Mar 16, 07181 Palmanova, Calvià, Mallorca España</p>
+
+            <h3 class="text-center text-2xl mt-12">Map</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.582209000465!
+                2d2.5360606763607927!3d39.52391817159714!2m3!1f0!2f0!3f0!3m2!1i1024!
+                2i768!4f13.1!3m3!1m2!1s0x1297895d87e97f99%3A0x4447fc135b006457!2sL.A%20American%20Diner!
+                5e0!3m2!1ses!2ses!4v1734235880996!5m2!1ses!2ses" width="800" height="400" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                class="md:w-[75%] w-[95%] mt-8 mx-auto"></iframe>
+        </section>
+
+        <section class="hidden" id="section-default">
+            <h1 class="text-9xl text-barn-red/30 font-thin text-center">404</h1>
+
+            <p class="text-center text-3xl mt-12">
+                Oops, looks like you've lost, <a class="text-royal-blue-traditional/50" href="/">return to the
+                    homepage</a>.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="mt-10 bg-coffee min-h-[20dvh] flex flex-col md:flex-row justify-around items-center">
+        <a class="text-white-smoke" href="https://www.facebook.com/p/LA-American-Diner-100038914158993"><i
+                class="ti ti-brand-facebook-filled bg-[#1877E2] text-white-smoke rounded-full p-1"></i>
+            LA American Diner
+        </a>
+
+        <a class="text-white-smoke" href="https://www.instagram.com/laamericandiner">
+            <i class="ti ti-brand-instagram bg-gradient-to-t from-[#FCB045] via-[#FD1D1D] 
+                to-[#833AB4] text-white-smoke rounded-full p-1"></i>
+            &#64;laamericandiner
+        </a>
+
+        <a class="text-white-smoke" href="https://www.tripadvisor.es/Restaurant_Review-g580306-d8056354-Reviews-
+            LA_American_Diner-Palmanova_Calvia_Majorca_Balearic_Islands.html"><i
+                class="ti ti-brand-tripadvisor bg-[#00AF87] rounded-full p-1"></i>
+            Tripadvisor</a>
+    </footer>
+
+    <div id="overlay"
+        class="fixed w-screen h-dvh bg-caput-mortum hidden top-0 left-0 flex-col justify-center items-center gap-10">
+        <button class="absolute top-4 left-4 hover:cursor-pointer" id="close-hamburger">
+            <i class="text-white-smoke ti ti-x text-6xl"></i>
+        </button>
+
+        <a class="text-white-smoke text-4xl" href="/menu">Menu</a>
+        <a class="text-white-smoke text-4xl" href="/reservation">Reservation</a>
+        <a class="text-white-smoke text-4xl" href="/contact">Contact</a>
+    </div>
 </body>
 
 </html>

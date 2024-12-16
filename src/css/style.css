@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
-body {
-    margin: 0;
-    padding: 0;
+@theme {
+	--color-caput-mortum: oklch(34.62% 0.0704 37.7);
+	--color-bistre: oklch(27.99% 0.0331 45.78);
+	--color-burnt-umber: oklch(38.12% 0.0912 37.2);
+	--color-coffee: oklch(41.23% 0.0721 37.5);
+	--color-barn-red: oklch(35.45% 0.1123 37.1);
+	--color-auburn: oklch(45.67% 0.1234 37.8);
+	--color-royal-blue-traditional: oklch(25.34% 0.0987 264.5);
+	--color-white-smoke: oklch(96.08% 0.0032 0);
+	--color-ut-orange: oklch(70.45% 0.2345 50);
 }
